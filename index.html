@@ -3,26 +3,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <title>fa-Encrypto</title>
 <link rel="stylesheet" href="bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+<script src="process.js"></script>
 </head>
 <body class="body11" style="background-color: #2d132c">
-
 <!-----------------------------------page content ---------------------------------------------------->
 <div class="container">
     <div class="jumbotron" style="background-color: #801336;color: aliceblue">
-<div class="container" style="background-color: #c72c41;">
-    <h1>Encrypto.</br></h1>
-</div>
-<div class="container" style="background-color: #ee4540;"><font size="5">
-	Encrypto is a simple encryption and decryption web application using a simple custom algorithm,you can check out the project by clicking on demo button and view the github code by clicking on code button.</br>
-	</font><center>
-		</br></br></span>
-		<a href="https://encrypto.netlify.com/" target="_blank"><button type="button" class="btn btn-primary" style="font-size: 35px;">DEMO</button></a>
-		<a href="#" target="_blank"><button type="button" class="btn btn-success" style="font-size: 35px;">CODE</button></a></br></br>
-	</center>
-</div>
-</div>
+        <div class="container" style="background-color: #c72c41;">
+            <h1>Encrypto.****in development</br></h1>
+        </div>
+        <div class="container" style="background-color: #ee4540;color: black;"><font size="5">
+            <form method="POST">Select :
+                <select id="myselect">
+                    <option id="encryption">encryption</option>
+                    <option id="decryption">decryption</option>
+                </select><br>
+                Key:<br>
+                <input id="key" type="text" required><br>
+                Input:<br>
+                <textarea id="input" rows="4" cols="50" required></textarea>
+                <input type="button" onclick="document.getElementById('output').value = starting()" value="Start"><input type="reset">
+                Output:<br>
+                <textarea id="output" rows="4" cols="50" required></textarea>
+            </form>
+        </div>
+    </div>
 </div>
 <!-----------------------------------page content end ---------------------------------------------------->
-
 </body>
 </html>
