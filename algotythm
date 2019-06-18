@@ -1,0 +1,5 @@
+get input text
+get random numbers size of text 33-177 if size of text is 7 get 7 random numbers store it in an array
+for size of input text
+    replace them with that ascii value
+genrate key multiply every number by 2

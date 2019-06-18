@@ -8,13 +8,24 @@ function starting(){
 }
 
 function encryption(){
-    var key=document.getElementById('key').value;
+    var key = Math.floor(Math.random() * 4) + 1;
     var input=document.getElementById('input').value;
-    return "enc";
+    var ascii_real;
+    var cypher="";
+    for(i=0; i<input.length;i++)
+        {
+            cypher=cypher+String.fromCharCode((input.charCodeAt(i))+key);
+        }
+    return cypher+key;
 }
 
 function decryption(){
     var key=document.getElementById('key').value;
     var input=document.getElementById('input').value;
-    return "xxx";
+    var plain="";
+        for(i=0; i<input.length;i++)
+        {
+            plain=plain+String.fromCharCode((input.charCodeAt(i))-key);
+        }
+    return plain;
 }
