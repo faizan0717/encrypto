@@ -6,26 +6,30 @@
 <link rel="stylesheet" href="style.css">
 <script src="process.js"></script>
 </head>
-<body class="body11" style="background-color: #2d132c">
+<body class="body11" style="background-color: #2d132c" onload="hide()">
 <!-----------------------------------page content ---------------------------------------------------->
 <div class="container">
     <div class="jumbotron" style="background-color: #801336;color: aliceblue">
         <div class="container" style="background-color: #c72c41;">
-            <h1>Encrypto.****in development</br></h1>
+            <h1>Encrypto</br></h1>
         </div>
         <div class="container" style="background-color: #ee4540;color: black;"><font size="5">
             <form method="POST">Select :
                 <select id="myselect">
                     <option id="encryption">encryption</option>
                     <option id="decryption">decryption</option>
-                </select><br>
+                </select><input type="button" onclick="form_select()" value="Start">
+                <div id="key_block">                
                 Key:<br>
-                <input id="key" type="text" required><br>
-                Input:<br>
-                <textarea id="input" rows="4" cols="50" required></textarea>
-                <input type="button" onclick="document.getElementById('output').value = starting()" value="Start"><input type="reset">
+                <input id="key" type="text" required><br></div>
+                <div id="input_area">Input:<br>
+                <textarea id="input" rows="4" cols="50" required></textarea></div>
+                <div id="output_area"><input type="button" onclick="document.getElementById('output').value = starting()" value="Start"><input type="reset">
                 Output:<br>
-                <textarea id="output" rows="4" cols="50" required></textarea>
+                <textarea id="output" rows="4" cols="50" required></textarea></div>
+                <div id="gkey_block">                
+                genrated Key:<br>
+                <input id="G_key" type="text"><br></div>
             </form>
         </div>
     </div>
